@@ -5,7 +5,6 @@
 (define-key magit-mode-map (kbd "Z") 'magit-quick-stash)
 
 (define-key key-translation-map "\C-j" "\C-x")
-(global-set-key (kbd "C-<return>") 'embiggen-toggler)
 (global-set-key (kbd "C-S-p") 'move-text-up)
 (global-set-key (kbd "C-S-n") 'move-text-down)
 

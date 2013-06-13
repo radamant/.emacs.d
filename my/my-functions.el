@@ -44,26 +44,6 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
   (interactive)
   (error (substitute-command-keys "i can never be killed.")))
 
-(defmacro toggler (toggler-name &optional fn full)
-  (let ((name
-         (intern
-          (mapconcat
-           'symbol-name
-           `(,toggler-name toggler)
-           "-"))))
-    `(defun ,name ()
-       (interactive)
-       (message (format "%s %s" ',toggler-name "toggled"))
-       (if (and (boundp ',name) (car ,name))
-           (progn
-             (set-window-configuration (cadr ,name))
-             (setq ,name '(nil nil)))
-         (progn
-           (setq ,name `(t ,(current-window-configuration)))
-           (and ,full (delete-other-windows))
-           (and ,fn (funcall ,fn)))))))
-
-
 (defun rename-current-buffer-and-file ()
   "Renames current buffer and file it is visiting."
   (interactive)
