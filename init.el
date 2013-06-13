@@ -8,33 +8,31 @@
 
 (package-initialize)
 
-(require 'smex)
-(require 'auto-complete)
-(require 'inf-mongo)
-(require 'powerline)
-(require 'pallet)
-(require 'itail)
-(require 'kill-ring-search)
-(require 'ido)
-(require 'ido-ubiquitous)
-
-(require 'magit)
-(require 'custom)
-
-(require 'simp)
+(mapc
+ 'require
+ '(
+   smex
+   auto-complete
+   inf-mongo
+   powerline
+   pallet
+   itail
+   kill-ring-search
+   ido
+   ido-ubiquitous
+   magit
+   custom
+   simp
+   my-functions
+   my-keybindings
+   my-hooks
+   my-settings
+   my-initializers))
 
 (simp-project-define
  '(:has (.git)
         :ignore (.git)))
 
-
-(mapc
- 'require
- '(my-functions
-   my-keybindings
-   my-hooks
-   my-settings
-   my-initializers))
 
 ;; load header files in objc-mode
 (add-to-list 'magic-mode-alist
