@@ -1,10 +1,6 @@
 (let ((default-directory "~/.emacs.d/"))
   (normal-top-level-add-subdirs-to-load-path))
 
-;; tips
-;; opening files via tramp/sudo
-;; C-x C-f /sudo:raspy.local:/etc/fstab RET
-
 (mapc
  'require
  '(
