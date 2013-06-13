@@ -24,14 +24,9 @@
    my-keybindings
    my-hooks
    my-add-to-lists
+   my-project-definitions
    my-settings
    my-initializers))
-
-(simp-project-define
- '(:has (.git)
-        :ignore (.git)))
-
-
 
 (require-maybe 'my-local)
 (require-maybe 'emux-session)
