@@ -1,6 +1,6 @@
 (smex-initialize)
 (ido-mode t)
-(ido-ubiquitous t)
+(ido-ubiquitous-mode t)
 (powerline-default-theme)
 (go-to-hell-bars)
 (toggler embiggen nil t)

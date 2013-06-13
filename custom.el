@@ -33,7 +33,6 @@
  '(ido-enable-flex-matching t)
  '(ido-everywhere t)
  '(ido-mode (quote both) nil (ido))
- '(ido-ubiquitous-mode t)
  '(indent-tabs-mode nil)
  '(kill-read-only-ok t)
  '(kill-whole-line t)
