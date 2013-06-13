@@ -4,11 +4,11 @@
 (mapc
  'require
  '(
+   my-bootstrap
    smex
    auto-complete
    inf-mongo
    powerline
-   pallet
    itail
    kill-ring-search
    ido
