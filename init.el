@@ -33,9 +33,6 @@
 
 
 
-(set-face-background 'fringe "#383830")
-(set-face-foreground 'vertical-border "#141411")
-
 (require-maybe 'my-local)
 (require-maybe 'emux-session)
 (dired "~/.emacs.d")
