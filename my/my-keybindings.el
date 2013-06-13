@@ -3,7 +3,8 @@
 (global-set-key (kbd "C-<return>") 'embiggen-toggler)
 (global-set-key (kbd "C-S-p") 'move-text-up)
 (global-set-key (kbd "C-S-n") 'move-text-down)
-(global-set-key  (kbd "M-x") 'smex)
+(when-available 'smex
+ (global-set-key  (kbd "M-x") 'smex))
 
 (global-set-key (kbd "M-l")  'next-in-frame-window)
 (global-set-key (kbd "M-h") 'previous-in-frame-window)

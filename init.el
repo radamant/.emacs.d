@@ -1,8 +1,14 @@
 (let ((default-directory "~/.emacs.d/"))
   (normal-top-level-add-subdirs-to-load-path))
+(defmacro require-maybe (feature &optional file)
+  "*Try to require FEATURE, but don't signal an error if `require' fails."
+  `(require ,feature ,file 'noerror))
+
+(defmacro when-available (func foo)
+  "*Do something if FUNCTION is available."
+  `(when (fboundp ,func) ,foo))
 
 (require 'my-keybindings)
-
 ;; tips
 ;; opening files via tramp/sudo
 ;; C-x C-f /sudo:raspy.local:/etc/fstab RET
@@ -109,8 +115,6 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
           (set-buffer-modified-p nil)
           (message "File '%s' successfully renamed to '%s'"
                    name (file-name-nondirectory new-name)))))))
-
-(require 'emux-session)
 
 (require 'itail)
 (require 'kill-ring-search)
@@ -243,3 +247,5 @@ WIP on branchname: short-sha commit-message"
 
 (if (featurep 'my-local)
     (require 'my-local))
+
+(require-maybe 'emux-session)
