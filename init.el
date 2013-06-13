@@ -37,6 +37,7 @@
  'require
  '(my-functions
    my-keybindings
+   my-hooks
    my-initializers))
 
 ;; Hooks
@@ -51,22 +52,9 @@
 
 ;; Remove trailing whitespace
 (setq require-final-newline 't)
-(add-hook 'find-file-hook 'delete-trailing-whitespace)
-(add-hook 'find-file-hook 'untabify-all)
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
-(add-hook 'before-save-hook 'untabify-all)
-(add-hook 'after-save-hook 'executable-make-buffer-file-executable-if-script-p)
-(add-hook 'objc-mode-hook 'objc-mode-customizations)
 
 ;; change backup location
 (setq backup-directory-alist '(("." . "~/.emacs.d/.backups")))
-
-;;; Remove M-h in magit-status
-(add-hook 'magit-mode-hook (lambda ()
-                             (define-key magit-mode-map (kbd "M-h") nil)))
-
-;;; Use auto-fill mode when in markdown
-(add-hook 'markdown-mode-hook 'auto-fill-mode)
 
 
 ;; Auto mode list
@@ -87,9 +75,6 @@
   (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
   (set-face-background 'fringe "#383830")
   (set-face-foreground 'vertical-border "#141411"))
-;;  (set-face-background 'mode-line "#E6DB74")
-;;  (set-face-background 'mode-line "#a6e22a")
-;;  (set-face-foreground 'mode-line "#141411"))
 
 ;; use utf-8 for everything
 (setq locale-coding-system 'utf-8)
@@ -97,9 +82,6 @@
 (set-keyboard-coding-system 'utf-8)
 (set-selection-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
-
-;;(setq ansi-term-color-vector (vector "white" "red" "green" "yellow" "royal blue" "magenta" "cyan" "white"))
-;;(setq ansi-term-color-vector [unspecified "white" "red" "green" "yellow" "royal blue" "white" "cyan" "white"])
 
 
 
