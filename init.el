@@ -8,7 +8,6 @@
 
 (package-initialize)
 
-(global-set-key (kbd "C-x C-c") 'dont-kill-emacs)
 (require 'smex)
 (require 'auto-complete)
 (require 'inf-mongo)
@@ -28,7 +27,6 @@
  '(:has (.git)
         :ignore (.git)))
 
-(define-key magit-mode-map (kbd "Z") 'magit-quick-stash)
 
 (mapc
  'require
@@ -57,3 +55,4 @@
 
 (require-maybe 'my-local)
 (require-maybe 'emux-session)
+(dired "~/.emacs.d")

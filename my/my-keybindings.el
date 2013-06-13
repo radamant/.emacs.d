@@ -1,10 +1,13 @@
-;; key bindings
+(global-set-key (kbd "C-x C-c") 'dont-kill-emacs)
+(when-available 'smex
+ (global-set-key  (kbd "M-x") 'smex))
+
+(define-key magit-mode-map (kbd "Z") 'magit-quick-stash)
+
 (define-key key-translation-map "\C-j" "\C-x")
 (global-set-key (kbd "C-<return>") 'embiggen-toggler)
 (global-set-key (kbd "C-S-p") 'move-text-up)
 (global-set-key (kbd "C-S-n") 'move-text-down)
-(when-available 'smex
- (global-set-key  (kbd "M-x") 'smex))
 
 (global-set-key (kbd "M-l")  'next-in-frame-window)
 (global-set-key (kbd "M-h") 'previous-in-frame-window)
