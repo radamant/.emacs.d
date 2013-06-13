@@ -8,25 +8,12 @@
 
 (package-initialize)
 
-(ido-mode t)
-(ido-ubiquitous t)
-
-
-
-
 (global-set-key (kbd "C-x C-c") 'dont-kill-emacs)
 (require 'smex)
-(smex-initialize)
-
 (require 'auto-complete)
-;;(require 'yasnippet)
-
 (require 'inf-mongo)
 (require 'powerline)
 (require 'pallet)
-
-(powerline-default-theme)
-
 
 ;;(require 'multi-term)
 ;;(setq multi-term-program "/bin/bash")
@@ -46,14 +33,11 @@
 
 (define-key magit-mode-map (kbd "Z") 'magit-quick-stash)
 
-(require 'my-functions)
-(require 'my-keybindings)
-
-;; Customizations
-
-(go-to-hell-bars)
-(toggler embiggen nil t)
-
+(mapc
+ 'require
+ '(my-functions
+   my-keybindings
+   my-initializers))
 
 ;; Hooks
 

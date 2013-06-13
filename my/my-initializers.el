@@ -1,0 +1,8 @@
+(smex-initialize)
+(ido-mode t)
+(ido-ubiquitous t)
+(powerline-default-theme)
+(go-to-hell-bars)
+(toggler embiggen nil t)
+(show-paren-mode t)
+(provide 'my-initializers)
