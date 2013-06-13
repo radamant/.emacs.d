@@ -1,0 +1,40 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("thoughtstream-wall_management"
+ (filename . "~/projects/thoughtstream-wall_management/")
+ (front-context-string . ".git\n  -rw-r--r-")
+ (rear-context-string . "44 May 17 12:08 ")
+ (position . 308))
+("thoughtstream-tsx"
+ (filename . "~/projects/thoughtstream-tsx/")
+ (front-context-string . ".git\n  -rw-r--r-")
+ (rear-context-string . "76 Apr  3 11:29 ")
+ (position . 239))
+("thoughtstream-user_management"
+ (filename . "~/projects/thoughtstream-user_management/")
+ (front-context-string . ".git\n  -rw-r--r-")
+ (rear-context-string . "10 Apr  2 13:21 ")
+ (position . 252))
+("thoughtstream-collaboration_server"
+ (filename . "~/projects/thoughtstream-collaboration_server/")
+ (front-context-string . "..\n  drwxr-xr-x ")
+ (rear-context-string . "88 Apr  1 11:31 ")
+ (position . 347))
+("thoughtstream-browser_client"
+ (filename . "~/projects/thoughtstream-browser_client/")
+ (front-context-string . "app\n  drwxr-xr-x")
+ (rear-context-string . "06 Apr  2 13:32 ")
+ (position . 509))
+("thoughtstream-ios"
+ (filename . "~/projects/thoughtstream-ios/")
+ (front-context-string . ".DS_Store\n  drwx")
+ (rear-context-string . "92 Apr  3 17:10 ")
+ (position . 247))
+("thoughtstream"
+ (filename . "~/projects/thoughtstream")
+ (front-context-string . ".DS_Store\n  drwx")
+ (rear-context-string . "48 Dec  3 17:39 ")
+ (position . 397))
+)
