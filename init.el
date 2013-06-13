@@ -245,7 +245,5 @@ WIP on branchname: short-sha commit-message"
   (untabify (point-min) (point-max)))
 
 
-(if (featurep 'my-local)
-    (require 'my-local))
-
+(require-maybe 'my-local)
 (require-maybe 'emux-session)
