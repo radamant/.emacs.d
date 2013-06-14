@@ -26,4 +26,4 @@
 
 (require-maybe 'my-local)
 (require-maybe 'emux-session)
-(dired "~/.emacs.d")
+;;(dired "~/.emacs.d")
