@@ -5,9 +5,12 @@
 (add-hook 'after-save-hook 'executable-make-buffer-file-executable-if-script-p)
 (add-hook 'objc-mode-hook 'objc-mode-customizations)
 
-;;; Remove M-h in magit-status
+;;; Remove M-h in various modes
 (add-hook 'magit-mode-hook (lambda ()
                              (define-key magit-mode-map (kbd "M-h") nil)))
+(add-hook 'org-mode-hook (lambda ()
+                      (define-key org-mode-map (kbd "M-h") nil)))
+
 ;;; Use auto-fill mode when in markdown
 (add-hook 'markdown-mode-hook 'auto-fill-mode)
 
