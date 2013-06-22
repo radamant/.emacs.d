@@ -21,6 +21,8 @@
 (global-set-key (kbd "M-j s") 'simp-project-rgrep)
 (global-set-key (kbd "M-j S") 'simp-project-rgrep-dwim)
 (global-set-key (kbd "M-j f") 'simp-project-find-file)
+(global-set-key (kbd "M-j k") 'copy-line)
+
 (global-set-key (kbd "M-`") 'other-frame)
 (global-set-key (kbd "C-c o") 'ff-get-other-file)
 (global-set-key (kbd "C-c f") 'ff-find-other-file)
