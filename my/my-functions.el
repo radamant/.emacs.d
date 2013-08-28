@@ -110,4 +110,33 @@ WIP on branchname: short-sha commit-message"
   (interactive)
   (untabify (point-min) (point-max)))
 
+
+;;; gives a nice overview of spec files
+(defun spec-overview ()
+  (interactive)
+  (occur "^[ \t]+\\(context\\|describe\\|it\\)")
+  ;;(next-in-frame-window)
+  (window-resize (get-buffer-window) 10))
+
+
+(defun indent-and-open-newline (&optional previous)
+  "Add a newline after current line and tab to indentation.
+If PREVIOUS is non-nil, go up a line first."
+  (interactive)
+  (if previous
+      (previous-line))
+  (end-of-line)
+  (newline)
+  (indent-for-tab-command))
+
+(defun previous-indent-and-open-newline ()
+  "call indent-and-open-newline with previous non-nil"
+  (interactive)
+  (indent-and-open-newline t))
+
+
+(defun force-save ()
+  (interactive)
+  (not-modified 1)
+  (save-buffer))
 (provide 'my-functions)

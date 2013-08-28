@@ -1,7 +1,6 @@
 (setq
  custom-file (expand-file-name "~/.emacs.d/custom.el")
  require-final-newline 't
- backup-directory-alist '(("." . "~/.emacs.d/.backups"))
  multi-term-program "/bin/zsh"
  inhibit-startup-message t
  org-agenda-files (list "~/.org/home.org" "~/.org/work.org"))
