@@ -1,10 +1,13 @@
 (let ((default-directory "~/.emacs.d/"))
   (normal-top-level-add-subdirs-to-load-path))
+(require 'cask "~/.cask/cask.el")
+
+
+(cask-initialize)
 
 (mapc
  'require
  '(
-   my-bootstrap
    smex
    auto-complete
    inf-mongo
