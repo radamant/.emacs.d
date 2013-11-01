@@ -14,3 +14,11 @@ It also includes self bootstrapping when pallet does not yet exist.
 1. Install cask: http://cask.github.io/installation/
 1. Open a terminal, go to ~/.emacs.d/ and run `cask install`
 1. open emacs
+
+If you are running a coacoa version of emacs, you may need to [create
+an eterm-color terminfo](http://stackoverflow.com/questions/8918910/weird-character-zsh-in-emacs-terminal)
+like so:
+
+```sh
+tic -o ~/.terminfo /Applications/Emacs.app/Contents/Resources/etc/e/eterm-color.ti
+```
