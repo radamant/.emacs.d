@@ -139,4 +139,8 @@ If PREVIOUS is non-nil, go up a line first."
   (interactive)
   (not-modified 1)
   (save-buffer))
+
+(defun switch-full-screen ()
+  (interactive)
+  (shell-command "wmctrl -r :ACTIVE: -btoggle,fullscreen"))
 (provide 'my-functions)
