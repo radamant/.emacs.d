@@ -4,10 +4,10 @@
 
 
 (cask-initialize)
-
 (mapc
  'require
  '(
+   pallet
    smex
    auto-complete
    inf-mongo
