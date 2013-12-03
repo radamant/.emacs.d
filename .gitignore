@@ -8,5 +8,6 @@
 /my/my-local.el
 /image-dired*
 /tramp
+autosaves*
+session.*
 .cask*
-
