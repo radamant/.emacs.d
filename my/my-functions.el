@@ -140,7 +140,14 @@ If PREVIOUS is non-nil, go up a line first."
   (not-modified 1)
   (save-buffer))
 
-(defun switch-full-screen ()
+(defun toggle-fullscreen-nix ()
   (interactive)
   (shell-command "wmctrl -r :ACTIVE: -btoggle,fullscreen"))
 (provide 'my-functions)
+
+(defun toggle-fullscreen-mac ()
+"Toggle full screen"
+(interactive)
+(set-frame-parameter
+nil 'fullscreen
+(when (not (frame-parameter nil 'fullscreen)) 'fullboth)))
