@@ -147,7 +147,7 @@ If PREVIOUS is non-nil, go up a line first."
 
 (defun toggle-fullscreen-mac ()
 "Toggle full screen"
-(interactive)
-(set-frame-parameter
-nil 'fullscreen
-(when (not (frame-parameter nil 'fullscreen)) 'fullboth)))
+  (interactive)
+  (set-frame-parameter
+   nil 'fullscreen
+   (when (not (frame-parameter nil 'fullscreen)) 'fullboth)))
