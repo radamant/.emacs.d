@@ -19,6 +19,8 @@
 (add-hook 'c-mode-hook (lambda ()
                       (define-key objc-mode-map (kbd "M-j") nil)))
 
+(add-hook 'c++-mode-hook (lambda ()
+                      (define-key objc-mode-map (kbd "M-j") nil)))
 
 ;;; Use auto-fill mode when in markdown
 (add-hook 'markdown-mode-hook 'auto-fill-mode)

@@ -151,3 +151,13 @@ If PREVIOUS is non-nil, go up a line first."
   (set-frame-parameter
    nil 'fullscreen
    (when (not (frame-parameter nil 'fullscreen)) 'fullboth)))
+
+(defun async-command-and-highlight (command highlights &optional output-buffer)
+  (if (get-buffer output-buffer)
+      (kill-buffer output-buffer))
+  (async-shell-command command output-buffer)
+  (with-current-buffer output-buffer
+    (mapcar
+     (lambda (highlight)
+       (highlight-phrase (car highlight) (cdr highlight)))
+     highlights)))
