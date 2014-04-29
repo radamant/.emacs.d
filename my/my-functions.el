@@ -106,9 +106,15 @@ WIP on branchname: short-sha commit-message"
   (define-key objc-mode-map (kbd "C-c h") 'objc-jump-between-header-source)
   (c-set-offset 'arglist-cont-nonempty 0))
 
-(defun untabify-all ()
+(defun untabify-all (&optional blacklist)
   (interactive)
-  (untabify (point-min) (point-max)))
+  (let ((should-run t))
+    (mapcar (lambda (x)
+              (when (string= (file-name-nondirectory buffer-file-name) x)
+                (setq should-run nil))) blacklist)
+    (when should-run
+      (message "running untabify")
+      (untabify (point-min) (point-max)))))
 
 
 ;;; gives a nice overview of spec files
