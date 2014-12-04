@@ -2,7 +2,6 @@
 /packages/archives/*
 /.mc-lists.el
 /url/cookies
-/elpa
 /emms
 /var/pcache/gh/*
 /my/my-local.el
@@ -10,4 +9,3 @@
 /tramp
 autosaves*
 session.*
-.cask*
