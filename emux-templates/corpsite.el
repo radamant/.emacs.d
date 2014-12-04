@@ -1,0 +1,5 @@
+(emux-session-set-default-directory "~/projects/corpsite-2014")
+(emux-screen-create '(:name "misc") "misc" "ls")
+;;(emux-screen-create '(:name "rc") "rc" "rc")
+;;(emux-screen-create '(:name "tail" :no-terminal t))
+;;(itail "log/development.log")
