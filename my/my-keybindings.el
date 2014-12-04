@@ -39,6 +39,7 @@
 (global-set-key (kbd "C-c f") 'ff-find-other-file)
 
 (global-set-key (kbd "C-x C-s") 'force-save)
+(global-set-key (kbd "C-x F") 'fill-region)
 (global-set-key (kbd "S-<backspace>") 'pop-to-mark-command)
 
 (provide 'my-keybindings)
