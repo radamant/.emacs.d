@@ -5,6 +5,7 @@
  'require
  '(
    smex
+   monokai-theme
    auto-complete
    inf-mongo
    powerline
