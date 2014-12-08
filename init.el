@@ -6,6 +6,7 @@
  '(
    smex
    monokai-theme
+   solarized-theme
    auto-complete
    inf-mongo
    powerline
