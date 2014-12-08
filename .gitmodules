@@ -1,0 +1,3 @@
+[submodule "elpa/emux"]
+	path = elpa/emux
+	url = https://github.com/re5et/emux
