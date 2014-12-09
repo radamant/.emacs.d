@@ -25,6 +25,15 @@
    my-settings
    my-initializers))
 
-(require-maybe 'my-local)
 (require-maybe 'emux-session)
-;;(dired "~/.emacs.d")
+(require-maybe 'my-local)
+
+(emux-session-define-template
+ emacs-config
+ (emux-session-set-default-directory "~/.emacs.d/")
+ (emux-session-set-default-directory "~/.emacs.d/")
+ (emux-screen-create '(:name "git") "git" "git status")
+ (find-file "init.el")
+ (split-window-vertically)
+ (other-window 1)
+ (find-file "my/my-local.el"))
