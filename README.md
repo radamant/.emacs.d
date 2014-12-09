@@ -6,8 +6,9 @@ I use [railwaycat's emacs](https://github.com/railwaycat/emacs-mac-port).
 
 1. fork this to your own account
 1. clone it to your ~/.emacs.d/
-1. make a shell script that loads your emacs (like in http://stackoverflow.com/questions/18330954/using-cask-with-emacs-app)
+1. Go to the .emacs.d folder and update your submodules: `git submodule init && git submodule update`
 1. open emacs
+1. [optional ]make a shell script that loads your emacs (like in http://stackoverflow.com/questions/18330954/using-cask-with-emacs-app)
 
 If you are running a coacoa version of emacs, you may need to [create
 an eterm-color terminfo](http://stackoverflow.com/questions/8918910/weird-character-zsh-in-emacs-terminal)
