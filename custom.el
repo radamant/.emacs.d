@@ -109,7 +109,6 @@
     (("elpa" . "http://tromey.com/elpa/")
      ("gnu" . "http://elpa.gnu.org/packages/")
      ("melpa" . "http://melpa.milkbox.net/packages/"))))
- '(package-user-dir "/Users/adam/.emacs.d/elpa")
  '(show-paren-mode t)
  '(tramp-default-method "ssh")
  '(uniquify-buffer-name-style (quote forward) nil (uniquify))
